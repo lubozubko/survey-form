@@ -7,27 +7,26 @@ html, body {
 header {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
+	align-items: flex-start;
 }
 
 #title {
-	flex: 1;
-	margin: 3px 30% 0px 5%;
-	color: black;
+	color: #120901;
 	font-size: 5.42em;
-	padding: 5px;
+	padding: 1px 55px;
 	font-family: 'Indie Flower', cursive;
-	text-shadow: 0px 5px 15px #fd6907,
-	0px 12px 25px black;
+	text-shadow: 4px 2px 5px #fd6907,
+	0px 1px 2px #120901;
 
 }
 
 #top-pic {
-	flex: 1;
-	margin-left: auto;
-	max-width: 100%;
 	display: block;
-	position: float;
+	margin-left: auto;
+	align-items: flex-end;
+	max-width: 70%;
+
 }
 
 /* main styling */
@@ -36,31 +35,31 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	color: black;
-	font-size: 1.5em;
-	border: 2px solid black;
+	opacity: 0.9;
+	color: #120901;
+	font-size: 1.2em;
+	border: 2px solid #120901;
+	border-radius: 5px;
 	margin: 0px 50px 50px 50px;
 	background-color: #ffa366;
-	box-shadow: 5px 5px 5px black;
+	box-shadow: 5px 5px 5px #120901;
 }
 
 #description {
-	flex: 1;
 	font-size: 1.1em;
 	text-align: center;
 }
 
 form, #todays-date > select, input, textarea, #dropdown {
-	flex: 1;
+	padding: 5px;
 	margin-left: 5px;
 	font-size: 18px;
-	font-family: 'Indie Flower', cursive;
-
 }
 
 .main-label {
 	font-size: 1.1em;
 	font-weight: bold;
+	padding: 0 5px;
 }
 
 form > div {
@@ -91,15 +90,11 @@ textarea {
 }
 
 #submit {
-	color: black;
+	color: #120901;
 	font-size: 2.02em;
 	font-weight: bold;
-	text-shadow: 0px 5px 15px #fd6907,
-	0px 10px 25px black;
-	font-family: 'Indie Flower', cursive;
 	background-color: white;
 	padding: 15px;
-	box-shadow: 5px 5px 5px black;
 
 }
 /* above footer styling */
@@ -111,12 +106,10 @@ textarea {
 }
 
 #bottom-pic {
-	flex: 1;
 	justify-content: flex-start;
 	display: block;
-	position: float;
-	max-width: 100%;
-	margin: 1% 0% 1% 25%;
+	max-width: 70%;
+	margin-left: auto;
 }
 
 /* footer */
