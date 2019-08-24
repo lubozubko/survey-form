@@ -1,22 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
 html, body {
-	background-color: white;
+	background-color: #FFFFFF;
+  font-family: 'Varela Round', sans-serif;
 }
 
 /* header styling */
 
 header {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: flex-end;
 	align-items: flex-start;
 }
 
 #title {
 	color: #120901;
-	font-size: 5.42em;
+	font-size: 6.42em;
 	padding: 1px 55px;
-	font-family: 'Indie Flower', cursive;
-	text-shadow: 4px 2px 5px #fd6907,
+	font-family: 'Barriecito', cursive;
+	text-shadow: 4px 2px 5px #ffa366,
 	0px 1px 2px #120901;
 
 }
@@ -25,6 +29,7 @@ header {
 	display: block;
 	margin-left: auto;
 	align-items: flex-end;
+  min-width: 50%;
 	max-width: 70%;
 
 }
@@ -93,7 +98,6 @@ textarea {
 	color: #120901;
 	font-size: 2.02em;
 	font-weight: bold;
-	background-color: white;
 	padding: 15px;
 
 }
@@ -132,4 +136,47 @@ a:hover {
 	text-decoration: underline;
 	color: #ffa366;
 	animation-duration: 0.5;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+}
+
+#copyright {
+    color: #120901;
+    font-size: 20px;
+}
+
+.fab {
+    opacity: 0.9;
+    font-size: 25px;
+    color: #120901;
+}
+
+.footer-social .fab:hover {
+    color: #fd6907;
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    -ms-transition-duration: 0.6s;
+    -o-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+
+.list-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.list-inline-item {
+    padding: 0 10px;
 }
