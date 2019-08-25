@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Underdog&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 
 html, body {
 	background-color: #FFFFFF;
-  font-family: 'Varela Round', sans-serif;
+	font-family: 'Varela Round', sans-serif;
 }
 
 /* header styling */
 
 header {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: flex-end;
 	align-items: flex-start;
 }
 
 #title {
 	color: #120901;
-	font-size: 6.42em;
+	font-size: 4.42em;
 	padding: 1px 55px;
-	font-family: 'Barriecito', cursive;
+	font-family: 'Underdog', cursive;
 	text-shadow: 4px 2px 5px #ffa366,
 	0px 1px 2px #120901;
 
@@ -28,8 +28,8 @@ header {
 #top-pic {
 	display: block;
 	margin-left: auto;
-	align-items: flex-end;
-  min-width: 50%;
+	justify-content: flex-end;
+	min-width: 50%;
 	max-width: 70%;
 
 }
@@ -39,13 +39,13 @@ header {
 #survey-form {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: stretch;
 	opacity: 0.9;
 	color: #120901;
 	font-size: 1.2em;
+	margin: 0px 50px;
 	border: 2px solid #120901;
 	border-radius: 5px;
-	margin: 0px 50px 50px 50px;
 	background-color: #ffa366;
 	box-shadow: 5px 5px 5px #120901;
 }
@@ -62,17 +62,17 @@ form, #todays-date > select, input, textarea, #dropdown {
 }
 
 .main-label {
+	display: flex;
+	justify-content: stretch;
 	font-size: 1.1em;
 	font-weight: bold;
-	padding: 0 5px;
+	padding: 5px;
 }
 
 form > div {
-	flex: 1;
-	align-items: center;
+
 	padding: 5px;
 	margin: 1px 5% 15px 5%;
-
 }
 
 ul {
@@ -85,7 +85,30 @@ li{
 	list-style: none;
 }
 
+input {
+	margin: 5px;
+}
+
+#email-phone > input, #dogName > input, #first-last-name > input, #address > input {
+	width: 300px;
+}
+#gender {
+	display: flex;
+	justify-content: stretch;
+}
+
+#housing {
+	display: flex;
+	flex-direction: column;
+}
+
+#housing > select {
+	margin: 15px;
+	width: 300px;
+}
+
 textarea {
+	resize: none;
 	width: 100%;
 }
 
@@ -96,10 +119,22 @@ textarea {
 
 #submit {
 	color: #120901;
+	background: #ffa366;
+	border: 2.5px solid #120901;
+	border-radius: 15px;
+	cursor: pointer;
+	margin: 10px;
 	font-size: 2.02em;
 	font-weight: bold;
-	padding: 15px;
+	padding: 22px;
+}
 
+#submit:hover {
+	background: #FFFFFF;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
 /* above footer styling */
 
@@ -107,13 +142,13 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding: 50px;
 }
 
 #bottom-pic {
-	justify-content: flex-start;
 	display: block;
-	max-width: 70%;
 	margin-left: auto;
+	max-width: 70%;
 }
 
 /* footer */
@@ -135,48 +170,75 @@ a {
 a:hover {
 	text-decoration: underline;
 	color: #ffa366;
-	animation-duration: 0.5;
+	animation-duration: 0.5s;
 }
 
 /* footer */
 
 footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    width: 100%;
-    padding: 15px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	width: 100%;
+	padding: 15px;
 }
 
 #copyright {
-    color: #120901;
-    font-size: 20px;
+	color: #120901;
+	font-size: 15px;
 }
 
 .fab {
-    opacity: 0.9;
-    font-size: 25px;
-    color: #120901;
+	opacity: 0.9;
+	font-size: 15px;
+	color: #120901;
 }
 
 .footer-social .fab:hover {
-    color: #fd6907;
-    -webkit-transition-duration: 0.6s;
-    -moz-transition-duration: 0.6s;
-    -ms-transition-duration: 0.6s;
-    -o-transition-duration: 0.6s;
-    transition-duration: 0.6s;
+	color: #fd6907;
+	-webkit-transition-duration: 0.6s;
+	-moz-transition-duration: 0.6s;
+	-ms-transition-duration: 0.6s;
+	-o-transition-duration: 0.6s;
+	transition-duration: 0.6s;
 }
 
 .list-inline {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+	flex-direction: row;
+	justify-coflexntent: center;
 
 }
 
 .list-inline-item {
-    padding: 0 10px;
+	padding: 0 10px;
 }
+
+@media (min-width: 760px) and (min-device-width: 760px) {
+	header {
+		flex-direction: row;
+		align-items: flex-end;
+	}
+
+	#title {
+		font-size: 6.42em;
+	}
+
+	#email-phone > input, #dogName > input, #first-last-name > input, #address > input {
+		width: auto;
+	}
+
+	.main-label {
+		display: inline-block;
+	}
+
+	#copyright {
+		font-size: 20px;
+	}
+
+	.fab {
+		font-size: 25px;
+	}
+}
+
