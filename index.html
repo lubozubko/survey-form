@@ -1,14 +1,10 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Survey Form</title>
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css"></li>
-	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-
-
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <!-- header -->
@@ -107,13 +103,16 @@
 
 		<!-- name -->
 
-		<div class="main-label" id="first-last-name">
-			<label id="name-label" for="first-name">First Name: </label>
+		<div id="first-last-name">
+			<label class="main-label" id="name-label">First Name: </label>
 			<input type="text" id="name" placeholder="John" required>
 
-			<label class="main-label" for="last-name-label">Last Name: </label>
+			<label class="main-label">Last Name: </label>
 			<input type="text" id="lastName" placeholder="Smith" required>
+		</div>
 
+		<!-- gender -->
+		<div id="gender">
 			<input type="radio" id="male" name="gender" value="1" required>
 			<label class="main-label" for="male">Male</label>
 
@@ -214,7 +213,7 @@
 		<!-- pets in household -->
 
 		<div id="pets-household">
-			<ul><label class="main-label" id="number-label" for="pets">How many pets are already in your household?
+			<ul><label class="main-label" id="number-label">How many pets are already in your household?
 			</label></ul>
 			<li><input type="number" id="number" min="1" max="10" placeholder="0"></li>
 		</div>
@@ -222,8 +221,8 @@
 		<!-- housing -->
 
 		<div id="housing">
-			<ul><label class="main-label" for="housing-label">What type of housing you reside?</label></ul>
-			<li><select id="dropdown"></li>
+			<label class="main-label">What type of housing you reside?</label>
+			<select id="dropdown">
 			<option disabled selected value>Select an option</option>
 			<option value="apt">Apt / Condo</option>
 			<option value="house">House</option>
@@ -234,16 +233,16 @@
 		<!-- comments -->
 
 		<div id="prepare">
-			<label class="main-label" for="prepare-label">How did you prepare yourself?</label>
+			<label class="main-label">How did you prepare yourself?</label>
 		</div>
 		<div id="textarea">
-    <textarea id="comments"
+    	<textarea id="comments"
 			  rows="10" cols="70" placeholder=" Write here how did you prepare yourself for adoption."></textarea>
 		</div>
 
 		<!-- submit button -->
 		<div id="button">
-			<button type="submit" id="submit">Submit</button>
+			<button type="submit" id="submit" onclick="return confirmed();">Submit</button>
 		</div>
 
 
@@ -254,17 +253,23 @@
 
 <div id="above-footer">
 	<img id="bottom-pic" src="https://www.courteouscanine.com/wp/wp-content/uploads/2013/10/dog-chillin-3-a8e12420a213f5bec96dc7547b4f6bfc.png" alt="Lying dog staring up">
+</div>
 
-	<!-- footer -->
-    <footer>
-            <p id="copyright">2019 &copy; Lubo Zubko</p>
-            <ul class="list-inline">
-                <li class="list-inline-item footer-social"><a href="https://www.freecodecamp.org/lubozubko" target="_blank"><i class="fab fa-free-code-camp"></i></a></li>
-                <li class="list-inline-item footer-social"><a href="https://codepen.io/lubozubko" target="_blank"><i class="fab fa-codepen"></i></a></li>
-                <li class="list-inline-item footer-social"><a href="https://github.com/lubozubko" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li class="list-inline-item footer-social"><a href="https://www.linkedin.com/in/lubomir-zubko-76b145bb/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                <li class="list-inline-item footer-social"><a href="https://twitter.com/lubozubko" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-    </footer>
+<!-- footer -->
+
+<footer>
+		<p id="copyright">2019 &copy; Lubo Zubko</p>
+		<ul class="list-inline">
+			<li class="list-inline-item footer-social"><a href="https://www.freecodecamp.org/lubozubko" target="_blank"><i class="fab fa-free-code-camp"></i></a></li>
+			<li class="list-inline-item footer-social"><a href="https://codepen.io/lubozubko" target="_blank"><i class="fab fa-codepen"></i></a></li>
+			<li class="list-inline-item footer-social"><a href="https://github.com/lubozubko" target="_blank"><i class="fab fa-github"></i></a></li>
+			<li class="list-inline-item footer-social"><a href="https://www.linkedin.com/in/lubomir-zubko-76b145bb/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+			<li class="list-inline-item footer-social"><a href="https://twitter.com/lubozubko" target="_blank"><i class="fab fa-twitter"></i></a></li>
+		</ul>
+	</footer>
+
+<!-- scripts -->
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
+
