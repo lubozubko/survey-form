@@ -90,7 +90,7 @@ input {
 }
 
 #email-phone > input, #dogName > input, #first-last-name > input, #address > input {
-	width: 300px;
+	width: 90%;
 }
 #gender {
 	display: flex;
